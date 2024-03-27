@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elderly Care Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><B>Kathmandu Care</B></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Our Elderly Care Center</h2>
+            <p>Providing compassionate care for seniors</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <img src="service1.jpg" alt="Assisted Living">
+                    <h3>Assisted Living</h3>
+                </div>
+                <div class="service-card">
+                    <img src="service2.jpg" alt="Memory Care">
+                    <h3>Memory Care</h3>
+                </div>
+                <div class="service-card">
+                    <img src="service3.jpg" alt="Rehabilitation Therapy">
+                    <h3>Rehabilitation Therapy</h3>
+                </div>
+                <div class="service-card">
+                    <img src="service4.jpg" alt="24/7 Nursing Care">
+                    <h3>24/7 Nursing Care</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="registration">
+        <div class="container">
+            <h2>Join Us as a Carer</h2>
+            <form action="register.php" method="POST">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" required></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kathmandu Care</p>
+        </div>
+    </footer>
+</body>
+</html>
