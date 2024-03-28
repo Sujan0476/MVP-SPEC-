@@ -47,5 +47,12 @@
             <p>&copy; 2024 Elderly Care Center</p>
         </div>
     </footer>
+    <script>
+    // Scroll to top when page is refreshed
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
+</script>
+
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Carer - Elderly Care Center</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Kathmandu Care</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>                    <li><a href="#">Services</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="become-a-carer">
+        <div class="container">
+            <h2>Complete this form to join us</h2>
+            <h3>If you need help or want more information about membership, please contact our membership team at membership@carersuk.org or call 020 7378 4997.</h3>
+            <form action="carer-registration.php" method="POST">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+    
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+    
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact_number" required>
+    
+                <label for="expected-salary">Expected Salary:</label>
+                <input type="text" id="expected-salary" name="expected_salary" required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Elderly Care Center</p>
+        </div>
+    </footer>
+    
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

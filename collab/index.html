@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header id="#top">
         <div class="container">
-            <h1><B>Kathmandu Care</B></h1>
+            <h1 class="logo"><a href="index.html">Kathmandu Care</a></h1>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#become-a-carer" class="join-button">Join Us</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -28,56 +30,92 @@
         </div>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
             <h2>Our Services</h2>
             <div class="service-cards">
                 <div class="service-card">
-                    <img src="service1.jpg" alt="Assisted Living">
-                    <h3>Assisted Living</h3>
+                    <a href="assisted-living.html">
+                        <img src="service1.jpg" alt="Assisted Living">
+                        <h3>Assisted Living</h3>
+                    </a>
                 </div>
                 <div class="service-card">
-                    <img src="service2.jpg" alt="Memory Care">
-                    <h3>Memory Care</h3>
+                    <a href="memory-care.html">
+                        <img src="service2.jpg" alt="Memory Care">
+                        <h3>Memory Care</h3>
+                    </a>
                 </div>
                 <div class="service-card">
-                    <img src="service3.jpg" alt="Rehabilitation Therapy">
-                    <h3>Rehabilitation Therapy</h3>
+                    <a href="rehabilitation-therapy.html">
+                        <img src="service3.jpg" alt="Rehabilitation Therapy">
+                        <h3>Rehabilitation Therapy</h3>
+                    </a>
                 </div>
                 <div class="service-card">
-                    <img src="service4.jpg" alt="24/7 Nursing Care">
-                    <h3>24/7 Nursing Care</h3>
+                    <a href="skilled-nursing-care.html">
+                        <img src="service4.jpg" alt="24/7 Skilled Nursing Care">
+                        <h3>24/7 Skilled Nursing Care</h3>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    
-
-    <section class="registration">
+    <section id="become-a-carer" class="join-us">
         <div class="container">
-            <h2>Join Us as a Carer</h2>
-            <form action="register.php" method="POST">
+            <h2>Join Us</h2>
+            <p>If you have a passion for caring for the elderly, we'd love to have you join our team.</p>
+            <!-- Updated link to "Become a Carer" page -->
+            <a href="become-a-carer.html" class="join-button">Become a Carer</a>
+        </div>
+
+    <section class="your-query">
+        <div class="container">
+            <h2>Your query</h2>
+            <form action="query.php" method="POST">
                 <label for="fullname">Full Name:</label>
                 <input type="text" id="fullname" name="fullname" required>
-
+    
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
-
+    
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" name="phone" required>
-
-                <label for="experience">Experience:</label>
-                <textarea id="experience" name="experience" required></textarea>
-
-                <button type="submit">Register</button>
+    
+                <label for="Query">Query:</label>
+                <textarea id="Query" name="Query" required></textarea>
+    
+                <button type="submit">Send</button>
             </form>
         </div>
     </section>
+    
+
+    
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Kathmandu Care</p>
+            <p>&copy; 2024 Kathmandu Care. All rights reserved.</p>
         </div>
     </footer>
+    <!to go to top>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <script>
+        // JavaScript to handle redirection to the index page with the anchor
+        document.addEventListener("DOMContentLoaded", function() {
+            var servicesButton = document.querySelector('a[href="index.html#services"]');
+            if (servicesButton) {
+                servicesButton.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    window.location.href = "index.html#services";
+                });
+            }
+        });
+    </script>
+    
 </body>
 </html>
