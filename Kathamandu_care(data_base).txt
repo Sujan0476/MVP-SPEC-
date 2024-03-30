@@ -1,0 +1,47 @@
+#TABLE FOR CARER
+
+
+CREATE TABLE Carer (
+    CareID INT AUTO_INCREMENT PRIMARY KEY,
+    First_Name VARCHAR(15) NOT NULL,
+    Last_Name VARCHAR(15) NOT NULL,
+    Address VARCHAR(30) NOT NULL,
+    Email VARCHAR(30),
+    Contact_Num INT(10),
+    Salary INT
+ );
+
+#TABLE FOR PATIENT
+
+CREATE TABLE Patient (
+    PatientID INT AUTO_INCREMENT PRIMARY KEY,
+    First_Name VARCHAR(15) NOT NULL,
+    Last_Name VARCHAR(15) NOT NULL,
+    Address VARCHAR(30),
+    Contact_Number INT,
+    Emergency_Number INT,
+    Relation VARCHAR(10),
+    Medicine_Info VARCHAR(40),
+    Treatment_Needed TEXT(40)
+);
+
+
+#TABLE FOR WORK
+
+CREATE TABLE Care_Assignment(
+    AssignmentID INT PRIMARY KEY,
+    CarerID INT,
+    PatientID INT,
+    Assignment_Date DATETIME,
+    FOREIGN KEY (CarerID) REFERENCES Carer(CareID),
+    FOREIGN KEY (PatientID) REFERENCES Patient(PatientID)
+);
+
+# table for queries
+
+CREATE TABLE Queries (
+    Full_Name VARCHAR(15) NOT NULL,
+    Email VARCHAR(30) NOT NULL
+    Contact_Number INT(15) NOT NULL,
+    Query TEXT NOT NULL
+);
