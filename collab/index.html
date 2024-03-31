@@ -69,26 +69,29 @@
             <a href="become-a-carer.html" class="join-button">Become a Carer</a>
         </div>
 
-    <section class="your-query">
-        <div class="container">
-            <h2>Your query</h2>
-            <form action="query.php" method="POST">
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-    
-                <label for="Query">Query:</label>
-                <textarea id="Query" name="Query" required></textarea>
-    
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
+        <section class="your-query">
+            <div class="container">
+                <h2>Your query</h2>
+                <form action="query.php" method="post">
+                    <!-- Add the hidden input field for QueryID -->
+                    <input type="hidden" name="QueryID" value="1"> <!-- Replace "123" with the actual QueryID -->
+        
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+        
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+        
+                    <label for="Message">Message:</label>
+                    <textarea id="Message" name="Message" required></textarea>
+        
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
     
 
     
@@ -116,6 +119,5 @@
             }
         });
     </script>
-    
 </body>
 </html>

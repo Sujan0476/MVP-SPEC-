@@ -12,12 +12,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Example: Connect to database and insert data
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "your_database";
+    $username = "root";
+    $password = "";
+    $dbname = "kathmandu_care";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli('localhost', 'root', '', 'kathmandu_care');
 
     // Check connection
     if ($conn->connect_error) {
@@ -25,7 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert data into database (replace with your actual database table and fields)
-    $sql = "INSERT INTO carers (first_name, last_name, address, email, contact_number, expected_salary) VALUES ('$first_name', '$last_name', '$address', '$email', '$contact_number', '$expected_salary')";
+    $sql = "INSERT INTO Carer (First_Name, Last_Name, Address, Email, Contact_Num, Salary) 
+            VALUES ('$first_name', '$last_name', '$address', '$email', '$contact_number', '$expected_salary')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Registration successful";
