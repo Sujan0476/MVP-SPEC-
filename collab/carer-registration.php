@@ -8,9 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $contact_number = $_POST['contact_number'];
     $expected_salary = $_POST['expected_salary'];
 
- 
+    // Validate and process the data (you can add more validation as needed)
 
-    //  Connect to database and insert data
+    // Example: Connect to database and insert data
     $servername = "localhost";
     $username = "root";
     $password = "";
