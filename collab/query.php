@@ -22,7 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['Message']; // Changed 'Query' to 'Message' to match the name attribute in the HTML form
 
     // Insert a new record into the database
-    $sql = "INSERT INTO queries (fullname, email, phone, Message) VALUES ('$fullname', '$email', '$phone', '$message')";
+    $sql = "INSERT INTO queries (full_name, email, phone, Message) 
+    VALUES ('$fullname', '$email', '$phone', '$message')";
+
 
     if ($conn->query($sql) === TRUE) {
         echo "New record inserted successfully.";
