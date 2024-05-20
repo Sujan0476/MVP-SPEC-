@@ -39,9 +39,11 @@ CREATE TABLE Care_Assignment(
 
 # table for queries
 
-CREATE TABLE Queries (
-    Full_Name VARCHAR(15) NOT NULL,
-    Email VARCHAR(30) NOT NULL
-    Contact_Number INT(15) NOT NULL,
-    Query TEXT NOT NULL
+CREATE TABLE queries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    Message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
